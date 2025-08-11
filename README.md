@@ -4,7 +4,9 @@
 
 ## 安装
 
-npm install sugar-reactive-js
+npm install sugar-player-js
+<link rel="stylesheet" href="/dist/sugarPlayer.css"/>
+<script src="/dist/sugarPlayer.js"></script>
 
 ## 使用
 
