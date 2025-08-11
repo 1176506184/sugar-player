@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:s-use="http://www.w3.org/1999/xhtml" xmlns:s-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<style>
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+<link rel="stylesheet" href="/dist/sugarPlayer.css"/>
+<script src="/dist/sugarPlayer.js"></script>
+<body>
+<div id="app" style="width: 100%;">
+    <video id="my-video" class="video-js" style="width: 100%;height:13.125rem">
+        <source src="https://cdn.17video.net/UploadFiles/audio/F862D4E6BB.mp3">
+        <p class="vjs-no-js">
+            请启用JavaScript观看视频
+        </p>
+    </video>
+</div>
+</body>
+
+<script>
+    const audio = "https://cdn.17video.net/UploadFiles/audio/F862D4E6BB.mp3"
+    createPlayer('my-video', {
+        title: '如何与计算机对话:顺序执行与变量',
+        src: 'https://cdn.17video.net/UploadFiles/audio/F862D4E6BB.mp3',
+        type: 'audio/mp3',
+        state: {
+            canNext: false,
+            canPrev: false
+        },
+        callback: {
+            prev: () => {
+                console.log("上一页")
+            },
+            next: () => {
+                console.log("下一页")
+            }
+        }
+    })
+</script>
+</html>
